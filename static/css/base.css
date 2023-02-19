@@ -1,0 +1,474 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('/static/fonts/MabryPro-Regular.ttf') format('truetype');
+}
+
+:root {
+    --color: #ff90e8;
+    --delivery: lightblue;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    background-color: var(--color);
+    /* background-color: #ff90e8; */
+    font-family: 'MyFont', sans-serif;
+}
+
+.ring-bg{
+    background: url('/media/transparent-bg.png') no-repeat;
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.no-bottom-border {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}  
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.text-yellow{
+    color: #ffc900;
+}
+
+.search-bg{
+    background-color: var(--color);
+}
+
+/* added styling for main shop now button and hover animation */
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+    transition: transform 250ms;
+}
+
+.shop-now-button:hover {
+    transform: translate3d(-1rem, -1rem,0rem);
+}
+
+.shop-now-button-pink {
+    background: pink;
+    color: white;
+    min-width: 260px;
+    transition: transform 250ms;
+    z-index: -9;
+}
+
+.shop-now-button-pink:hover {
+    background: pink;
+    color: white;
+    transform: translate3d(-0.5rem, -0.5rem,0rem);
+}
+
+.shop-now-button-yellow {
+    background: yellow;
+    color: white;
+    min-width: 260px;
+    transition: transform 250ms;
+    z-index: -9;
+}
+
+.shop-now-button-yellow:hover {
+    background: yellow;
+    color: white;
+    min-width: 260px;
+    transition: transform 250ms;
+}
+
+.stack-buttons {
+    position: absolute;
+}
+
+.stack-cards {
+    position: absolute;
+}
+
+.quantity-btn {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* Styling About Page */
+.about-style{
+    text-align: justify;
+    color: lightblue;
+    -webkit-text-stroke: 0.5px black; /* width and color */
+}
+
+/* Card styling css effect */
+.card{
+    transition: transform 250ms;
+}
+
+.card:hover {
+    transform: translate3d(-0.5rem, -0.5rem,0rem);
+}
+
+/* Adding styling for free delivery button*/
+.free-delivery{
+    -webkit-text-stroke: 1px black; /* width and color */
+    color: var(--delivery);
+}
+
+/* Justify text class */
+.custom-justify{
+    text-align: justify;
+}
+
+/* added styling to form to center and remove border styling */
+.form-control .product-quant {
+    text-align: center;
+    border-width: 0;
+    z-index: -1;
+}
+
+.scroll-right {
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+}
+.scroll-right h4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    /* Starting position */
+    -moz-transform:translateX(-100%);
+    -webkit-transform:translateX(-100%);	
+    transform:translateX(-100%);
+    /* Apply animation to this element */	
+    -moz-animation: scroll-right 25s linear infinite;
+    -webkit-animation: scroll-right 25s linear infinite;
+    animation: scroll-right 25s linear infinite;
+}
+   /* Move it (define the animation) */
+@-moz-keyframes scroll-right {
+    0%   { -moz-transform: translateX(-100%); }
+    100% { -moz-transform: translateX(100%); }
+}
+@-webkit-keyframes scroll-right {
+    0%   { -webkit-transform: translateX(-100%); }
+    100% { -webkit-transform: translateX(100%); }
+}
+@keyframes scroll-right {
+    0%   { 
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%); 
+    }
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black-large {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 5px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: black;
+}  
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .ring-bg{
+        display: none;
+    }
+}
