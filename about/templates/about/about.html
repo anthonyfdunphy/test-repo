@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100 homepage">
+        <div class="row h-25 d-flex align-items-center justify-content-center">
+            <div class="col-10 col-md-8 my-auto">
+                <h1 class="display-2 text-yellow text-uppercase"> ABOUT SECTION </h1> 
+            </div>
+        </div>
+
+        <div class="row h-50 d-flex align-items-center justify-content-center">
+            <div class="col-10 col-md-8 my-auto">
+                <p class="text-uppercase about-style">Welcome to our jewelry store, where we specialize in providing our customers with exquisite and unique pieces that capture the essence of beauty and elegance. Our passion for jewelry goes beyond mere ornamentation, and we understand that a piece of jewelry is not just an accessory, but a reflection of one's personality and style. We believe that jewelry should be an expression of oneself and a symbol of love, affection, and gratitude.
+                    Our collection of fine jewelry features a range of styles and designs, from timeless classics to contemporary creations, all crafted with precision and expertise. We offer a wide selection of engagement rings, signet rings, pendants, and other accessories, all made with the finest materials, including precious metals and gemstones where we working with the <a rel="nofollow" href="https://castrosmith.com/" target="_blank">best partners</a> in the industry.
+                </p>
+                <h2 class="text-uppercase about-style d-flex justify-content-center"><a href="{% url 'contact' %}" style="text-decoration:none">Contact us here</a></h2>
+                <h5 class="text-uppercase about-style d-flex justify-content-center"><a href="{% url 'newsletter_signup' %}" style="color: inherit">Future Newsletter Sign Up</a></h5>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

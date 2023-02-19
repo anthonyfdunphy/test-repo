@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100 homepage">
+        <h2 class="logo-font mb-4">Contact Us</h2>
+        <h5 class="text-muted">Feel free to send us any message you wish!</h5>
+        {% crispy form %}
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
